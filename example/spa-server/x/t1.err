@@ -1,0 +1,14 @@
+--2022-06-04 15:18:00--  http://127.0.0.1:9094/index.html
+Connecting to 127.0.0.1:9094... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: ./ [following]
+--2022-06-04 15:18:00--  http://127.0.0.1:9094/
+Reusing existing connection to 127.0.0.1:9094.
+HTTP request sent, awaiting response... 200 OK
+Length: 17 [text/html]
+Saving to: ‘t1.out’
+
+     0K                                                       100% 2.32M=0s
+
+2022-06-04 15:18:00 (2.32 MB/s) - ‘t1.out’ saved [17/17]
+
