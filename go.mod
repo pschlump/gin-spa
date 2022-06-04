@@ -1,4 +1,4 @@
-module github.com/pschlump/spa
+module github.com/pschlump/gin-spa/spa
 
 go 1.18
 
