@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pschlump/gin-spa/spa"
+	spa "github.com/pschlump/gin-spa/spa"
 )
 
 func main() {
