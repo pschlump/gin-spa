@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/gin-gonic/gin v1.8.0
-	github.com/pschlump/gin-spa v1.0.5
+	github.com/pschlump/gin-spa v1.0.6
 )
 
 require (
@@ -34,4 +34,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/pschlump/gin-spa => ../..
+// replace github.com/pschlump/gin-spa => ../..

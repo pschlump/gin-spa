@@ -56,6 +56,8 @@ github.com/pschlump/filelib v1.0.6 h1:KJdAoE+5ovlpHrfs4CTGJDXmHCEyGK+sx3CKmBajgD
 github.com/pschlump/filelib v1.0.6/go.mod h1:CxEa7t6Y1lukm2ar5iMbm1imu8fN4V52tgrWtXUqd1g=
 github.com/pschlump/gin-spa v1.0.5 h1:KBSHab9oIE14/G0CVBNo0sbkOvpDNUMmueQgf6cU788=
 github.com/pschlump/gin-spa v1.0.5/go.mod h1:jkDZdEM7cJYIId9p2nJ/IVaBubv0ltDAKxN2f33t2Sk=
+github.com/pschlump/gin-spa v1.0.6 h1:/ZomodeuN3TWDuqVFEsfLLn6uyVjk7OQRe2PkVcTZ2g=
+github.com/pschlump/gin-spa v1.0.6/go.mod h1:jkDZdEM7cJYIId9p2nJ/IVaBubv0ltDAKxN2f33t2Sk=
 github.com/pschlump/json v1.12.0 h1:PjkeVEgEUg+vkHC8CfeXIG4fChev3a7gjl9wYrTnPIE=
 github.com/pschlump/json v1.12.0/go.mod h1:MyeKNxcsYS/AaCqIp6DgPdaE/4NVH49OJVCnQsRoevI=
 github.com/rogpeppe/go-internal v1.6.1/go.mod h1:xXDCJY+GAPziupqXw64V24skbSoqbTEfhy4qGm1nDQc=
