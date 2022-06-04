@@ -1,14 +1,14 @@
---2022-06-04 15:18:00--  http://127.0.0.1:9094/login
+--2022-06-04 16:46:13--  http://127.0.0.1:9094/login
 Connecting to 127.0.0.1:9094... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: ./ [following]
---2022-06-04 15:18:00--  http://127.0.0.1:9094/
+--2022-06-04 16:46:13--  http://127.0.0.1:9094/
 Reusing existing connection to 127.0.0.1:9094.
 HTTP request sent, awaiting response... 200 OK
 Length: 17 [text/html]
 Saving to: ‘t2.out’
 
-     0K                                                       100% 2.70M=0s
+     0K                                                       100% 1.80M=0s
 
-2022-06-04 15:18:00 (2.70 MB/s) - ‘t2.out’ saved [17/17]
+2022-06-04 16:46:13 (1.80 MB/s) - ‘t2.out’ saved [17/17]
 

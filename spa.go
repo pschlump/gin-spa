@@ -24,7 +24,9 @@ func InSpaList(s string, spa SPAList) (to string, found bool) {
 	return
 }
 
-func StaticServeMiddleware(urlPrefix, spaDirectory string, spa SPAList, logFile *os.File) gin.HandlerFunc {
+func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string, logFile *os.File) gin.HandlerFunc {
+	var spalist SPAList
+	spalist.FromTo = spa
 	logFilePtr = logFile
 	directory := static.LocalFile(spaDirectory, true)
 	fileserver := http.FileServer(directory)
@@ -35,7 +37,7 @@ func StaticServeMiddleware(urlPrefix, spaDirectory string, spa SPAList, logFile 
 		if directory.Exists(urlPrefix, c.Request.URL.Path) {
 			fileserver.ServeHTTP(c.Writer, c.Request)
 			c.Abort()
-		} else if val, found := InSpaList(c.Request.URL.Path, spa); found {
+		} else if val, found := InSpaList(c.Request.URL.Path, spalist); found {
 			dbgo.Fprintf(logFilePtr, "SAP Remap: from ->%s<- to ->%s<- at:%(LF)\n", c.Request.URL.Path, val)
 			c.Request.URL.Path = val
 			fileserver.ServeHTTP(c.Writer, c.Request)
