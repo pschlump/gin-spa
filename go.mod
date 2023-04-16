@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/gin-gonic/contrib v0.0.0-20201101042839-6a891bf89f19
 	github.com/gin-gonic/gin v1.8.0
-	github.com/pschlump/dbgo v1.0.3
+	github.com/pschlump/dbgo v1.0.6
 )
 
 require (

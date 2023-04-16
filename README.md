@@ -19,18 +19,16 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/pschlump/gin-spa/spa"
+	spa "github.com/pschlump/gin-spa"
 )
 
 func main() {
 	r := gin.Default()
-	pathsToRemap = spa.SPAList{
-		FromTo: map[string]string{
-			"/login": "/index.html",
-			"/logout": "/index.html",
-		},
+	pathsToRemap = map[string]string{
+		"/login": "/index.html",
+		"/logout": "/index.html",
 	}
-	r.Use(spa.Middleware("/", "./static/spa", pathsToRemap, os.Stderr)) // your build of React or other SPA
+	r.Use(spa.StaticServeMiddleware("/", "./build", pathsToRemap, os.Stderr)) // your build of React or other SPA
 	r.Run()
 }
 ```
