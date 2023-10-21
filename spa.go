@@ -38,10 +38,16 @@ func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string
 			fileserver.ServeHTTP(c.Writer, c.Request)
 			c.Abort()
 		} else if val, found := InSpaList(c.Request.URL.Path, spalist); found {
-			dbgo.Fprintf(logFilePtr, "SAP Remap: from ->%s<- to ->%s<- at:%(LF)\n", c.Request.URL.Path, val)
+			dbgo.Fprintf(logFilePtr, "SPA Remap: from ->%s<- to ->%s<- at:%(LF)\n", c.Request.URL.Path, val)
 			c.Request.URL.Path = val
 			fileserver.ServeHTTP(c.Writer, c.Request)
 			c.Abort()
 		}
 	}
 }
+
+func ResetLogFile(newFp *os.File) {
+	logFilePtr = newFp
+}
+
+/* vim: set noai ts=4 sw=4: */
