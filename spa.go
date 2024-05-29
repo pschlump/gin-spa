@@ -1,8 +1,8 @@
 package spa
 
 import (
+	"io"
 	"net/http"
-	"os"
 	"sync"
 
 	"github.com/gin-gonic/contrib/static"
@@ -15,7 +15,7 @@ type SPAList struct {
 	mutex  sync.Mutex
 }
 
-var logFilePtr *os.File
+var logFilePtr io.WriteCloser // var logFilePtr *os.File
 
 func InSpaList(s string, spa SPAList) (to string, found bool) {
 	spa.mutex.Lock()
@@ -24,7 +24,8 @@ func InSpaList(s string, spa SPAList) (to string, found bool) {
 	return
 }
 
-func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string, logFile *os.File) gin.HandlerFunc {
+// func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string, logFile *os.File) gin.HandlerFunc {
+func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string, logFile io.WriteCloser) gin.HandlerFunc {
 	var spalist SPAList
 	spalist.FromTo = spa
 	logFilePtr = logFile
@@ -46,7 +47,8 @@ func StaticServeMiddleware(urlPrefix, spaDirectory string, spa map[string]string
 	}
 }
 
-func ResetLogFile(newFp *os.File) {
+// func ResetLogFile(newFp *os.File) {
+func ResetLogFile(newFp io.WriteCloser) {
 	logFilePtr = newFp
 }
 
